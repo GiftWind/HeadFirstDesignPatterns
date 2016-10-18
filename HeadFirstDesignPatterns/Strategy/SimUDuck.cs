@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Strategy
 {
@@ -12,49 +8,27 @@ namespace Strategy
         {
             MallardDuck Duck1 = new MallardDuck();
             RedheadDuck Duck2 = new RedheadDuck();
+            RubberDuck Duck3 = new RubberDuck();
 
             Duck1.Display();
             Duck1.Quack();
             Duck1.Swim();
+            Duck1.Fly();
+            Console.WriteLine();
 
             Duck2.Display();
             Duck2.Quack();
             Duck2.Swim();
-            
+            Duck2.Fly();
+            Console.WriteLine();
+
+            Duck3.Display();
+            Duck3.Quack();
+            Duck3.Swim();
+            Duck3.Fly();
+            Console.WriteLine();
+
             Console.ReadKey();
-        }
-    }
-
-    abstract class Duck
-    {
-        public void Quack()
-        {
-            Console.WriteLine("Quack");
-        }
-
-        public void Swim()
-        {
-            Console.WriteLine("I'm swimming");
-        }
-
-        public abstract void Display();
-
-
-    }
-
-    class MallardDuck : Duck
-    {
-        public override void Display()
-        {
-            Console.WriteLine("I'm mallard duck");
-        }
-    }
-
-    class RedheadDuck : Duck
-    {
-        public override void Display()
-        {
-            Console.WriteLine("I'm a redhead duck");
         }
     }
 }
