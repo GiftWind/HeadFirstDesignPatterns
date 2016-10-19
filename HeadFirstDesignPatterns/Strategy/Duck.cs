@@ -3,24 +3,32 @@
 namespace Strategy
 {
 
-    abstract class Duck
+    public abstract class Duck
     {
-        public void Quack()
+        public FlyBehavior FlyBehavior { get; set; }
+        public QuackBehavior QuackBehavior { get; set; }
+
+        public Duck()
         {
-            Console.WriteLine("Quack");
+
+        }
+            
+        public abstract void Display();
+
+        public void PerformFly()
+        {
+            FlyBehavior.Fly();
+        }
+
+        public void PerformQuack()
+        {
+            QuackBehavior.Quack();
         }
 
         public void Swim()
         {
-            Console.WriteLine("I'm swimming");
+            Console.WriteLine("All ducks float, even decoys!");
         }
-
-        public void Fly()
-        {
-            Console.WriteLine("I'm flying");
-        }
-
-        public abstract void Display();
 
 
     }

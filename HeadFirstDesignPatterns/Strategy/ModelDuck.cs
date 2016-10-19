@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    class RubberDuck : Duck
+    class ModelDuck : Duck
     {
-        public RubberDuck()
+        public ModelDuck()
         {
             FlyBehavior = new FlyNoWay();
-            QuackBehavior = new Squeak();
+            QuackBehavior = new QuackQuack();
         }
         public override void Display()
         {
-            Console.WriteLine("I'm a rubber duck");
+            Console.WriteLine("I'm a model duck");
         }
     }
 }
