@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Strategy
 {
-    class FlyRocketPowered : FlyBehavior
+    public class FlyRocketPowered : IFlyBehavior
     {
         public void Fly()
         {

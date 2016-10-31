@@ -5,14 +5,9 @@ namespace Strategy
 
     public abstract class Duck
     {
-        public FlyBehavior FlyBehavior { get; set; }
-        public QuackBehavior QuackBehavior { get; set; }
+        public IFlyBehavior FlyBehavior { get; set; }
+        public IQuackBehavior QuackBehavior { get; set; }
 
-        public Duck()
-        {
-
-        }
-            
         public abstract void Display();
 
         public void PerformFly()

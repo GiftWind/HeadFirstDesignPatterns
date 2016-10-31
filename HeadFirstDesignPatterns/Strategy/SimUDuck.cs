@@ -2,27 +2,27 @@
 
 namespace Strategy
 {
-    class SimUDuck
+    public class SimUDuck
     {
-        static void Main()
+        public static void Main()
         {
 
-            Duck Duck1 = new MallardDuck();
-            Duck Duck2 = new ModelDuck();
+            Duck duck1 = new MallardDuck();
+            Duck duck2 = new ModelDuck();
 
-            Duck1.Display();
-            Duck1.Swim();
-            Duck1.PerformQuack();
-            Duck1.PerformFly();
+            duck1.Display();
+            duck1.Swim();
+            duck1.PerformQuack();
+            duck1.PerformFly();
 
             Console.WriteLine();
 
-            Duck2.Display();
-            Duck2.Swim();
-            Duck2.PerformQuack();
-            Duck2.PerformFly();
-            Duck2.FlyBehavior = new FlyRocketPowered();
-            Duck2.PerformFly();
+            duck2.Display();
+            duck2.Swim();
+            duck2.PerformQuack();
+            duck2.PerformFly();
+            duck2.FlyBehavior = new FlyRocketPowered();
+            duck2.PerformFly();
 
 
             Console.ReadKey();

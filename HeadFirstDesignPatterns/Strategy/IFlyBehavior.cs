@@ -1,6 +1,6 @@
 ﻿namespace Strategy
 {
-    public interface FlyBehavior
+    public interface IFlyBehavior
     {
         void Fly();
     }

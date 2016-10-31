@@ -2,7 +2,6 @@
 
 namespace Strategy
 {
-
     public class MallardDuck : Duck
     {
         public MallardDuck()
