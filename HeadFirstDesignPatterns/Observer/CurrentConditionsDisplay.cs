@@ -1,4 +1,6 @@
-﻿namespace Observer
+﻿using System;
+
+namespace Observer
 {
     class CurrentConditionsDisplay : IObserver, IDisplayElement
     {
@@ -14,12 +16,14 @@
 
         public void Update(float temperature, float humidity, float pressure)
         {
-            
+            this._temperature = temperature;
+            this._humidity = humidity;
+            Display();
         }
 
         public void Display()
         {
-            
+            Console.WriteLine($"Current conditions: {_temperature} degrees and {_humidity}% humidity.");
         }
     }
 }
