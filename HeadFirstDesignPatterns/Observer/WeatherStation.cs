@@ -9,10 +9,12 @@ namespace Observer
             WeatherData weatherData = new WeatherData();
             
             CurrentConditionsDisplay currentConditions = new CurrentConditionsDisplay(weatherData);
+            StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
+            ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
 
-            weatherData.SetMeasurements(22, 70, 30);
-            weatherData.SetMeasurements(21, 80, 80);
-            weatherData.SetMeasurements(-5, 12, 22);
+            weatherData.SetMeasurements(-2, 85, 756);
+            weatherData.SetMeasurements(21, 80, 786);
+            weatherData.SetMeasurements(-10, 12, 720);
 
             Console.ReadLine();
         }
