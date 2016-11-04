@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Decorator
+﻿namespace Decorator
 {
-    class HouseBlend
+    class HouseBlend : Beverage
     {
+        public HouseBlend()
+        {
+            this.Description = "House Blend Coffee";
+        }
+
+        public override double GetCost()
+        {
+            return 0.89;
+        }
     }
 }

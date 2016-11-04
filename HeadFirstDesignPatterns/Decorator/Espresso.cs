@@ -4,10 +4,10 @@
     {
         public Espresso()
         {
-            Description = "Espresso";
+            this.Description = "Espresso";
         }
 
-        public override double Cost()
+        public override double GetCost()
         {
             return 1.99;
         }
