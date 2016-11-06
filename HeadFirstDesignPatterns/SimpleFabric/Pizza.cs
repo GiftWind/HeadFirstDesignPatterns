@@ -1,27 +1,42 @@
 ﻿using System;
+using System.Collections;
 
 namespace SimpleFabric
 {
     public abstract class Pizza
     {
+        public string Name { get; set; }
+        public string Dough { get; set; }
+        public string Sauce { get; set; }
+        public ArrayList Toppings = new ArrayList(); 
+
         public void Prepare()
         {
-           Console.WriteLine("Preparing pizza");
+            Console.WriteLine($"Preparing {Name}...");
+            Console.WriteLine("Tossing dough...");
+            Console.WriteLine("Adding sauce");
+            Console.WriteLine("Adding toppings:");
+            foreach (var top in Toppings)
+            {
+                Console.WriteLine(top);
+            }
         }
 
-        public void Bake()
+        public virtual void Bake()
         {
-            Console.WriteLine("Baking pizza");
+            Console.WriteLine("Bake for 25 minutes at 350");
         }
 
-        public void Cut()
+        public virtual void Cut()
         {
-            Console.WriteLine("Cutting pizza");
+            Console.WriteLine("Cutting pizza into diagonal slices");
         }
 
         public void Box()
         {
-            Console.WriteLine("Boxing pizza");
+            Console.WriteLine("Place pizza in official PizzaStore box");
         }
+
+       
     }
 }
