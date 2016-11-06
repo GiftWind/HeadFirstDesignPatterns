@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleFabric
+namespace FabricMethod
 {
     internal class ChicagoStyleCheesePizza : Pizza
     {

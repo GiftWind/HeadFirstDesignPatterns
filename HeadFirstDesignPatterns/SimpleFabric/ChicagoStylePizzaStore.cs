@@ -1,4 +1,4 @@
-﻿namespace SimpleFabric
+﻿namespace FabricMethod
 {
     public class ChicagoStylePizzaStore : PizzaStore
     {

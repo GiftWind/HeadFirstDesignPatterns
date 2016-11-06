@@ -1,6 +1,7 @@
-﻿namespace SimpleFabric
+﻿namespace FabricMethod
 {
     internal class ChicagoStyleClamPizza : Pizza
     {
+        
     }
 }

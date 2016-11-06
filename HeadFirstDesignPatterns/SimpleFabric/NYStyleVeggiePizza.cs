@@ -1,4 +1,4 @@
-﻿namespace SimpleFabric
+﻿namespace FabricMethod
 {
     internal class NYStyleVeggiePizza : Pizza
     {
