@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Deco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "SimpleFabric\FactoryMethod.csproj", "{1F27CAAF-83E1-49C0-BD6C-89E3EA8F2FAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{E8CCAF29-BE88-4A60-9E6B-0539A9832484}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1F27CAAF-83E1-49C0-BD6C-89E3EA8F2FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F27CAAF-83E1-49C0-BD6C-89E3EA8F2FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F27CAAF-83E1-49C0-BD6C-89E3EA8F2FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8CCAF29-BE88-4A60-9E6B-0539A9832484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8CCAF29-BE88-4A60-9E6B-0539A9832484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8CCAF29-BE88-4A60-9E6B-0539A9832484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8CCAF29-BE88-4A60-9E6B-0539A9832484}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

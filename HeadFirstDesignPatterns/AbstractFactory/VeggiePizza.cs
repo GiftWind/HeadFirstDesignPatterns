@@ -2,11 +2,11 @@
 
 namespace AbstractFactory
 {
-    class CheesePizza : Pizza
+    internal class VeggiePizza : Pizza
     {
-        private readonly IPizzaIngredientFactory _ingredientFactory;
+        readonly IPizzaIngredientFactory _ingredientFactory;
 
-        public CheesePizza(IPizzaIngredientFactory ingredientFactory)
+        public VeggiePizza(IPizzaIngredientFactory ingredientFactory)
         {
             this._ingredientFactory = ingredientFactory;
         }
@@ -15,7 +15,8 @@ namespace AbstractFactory
             Console.WriteLine($"Preparing {this.Name}");
             this.Dough = _ingredientFactory.CreateDough();
             this.Sauce = _ingredientFactory.CreateSauce();
-            this.Cheese = _ingredientFactory.CreateCheese();
+            this.Veggies = _ingredientFactory.CreateVeggies();
+
         }
     }
 }

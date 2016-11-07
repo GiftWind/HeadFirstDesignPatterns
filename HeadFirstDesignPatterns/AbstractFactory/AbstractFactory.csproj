@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="BlackOlives.cs" />
     <Compile Include="Cheese.cs" />
+    <Compile Include="CheesePizza.cs" />
     <Compile Include="ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="ClamPizza.cs" />
     <Compile Include="Clams.cs" />
     <Compile Include="Dough.cs" />
     <Compile Include="EggPlant.cs" />
@@ -59,6 +61,8 @@
     <Compile Include="NYPizzaIngredientFactory.cs" />
     <Compile Include="Onion.cs" />
     <Compile Include="Pepperoni.cs" />
+    <Compile Include="Pizza.cs" />
+    <Compile Include="NYPizzaStore.cs" />
     <Compile Include="PlumTomatoSauce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +73,7 @@
     <Compile Include="Spinach.cs" />
     <Compile Include="ThickCrustDough.cs" />
     <Compile Include="ThinCrustDough.cs" />
+    <Compile Include="VeggiePizza.cs" />
     <Compile Include="Veggies.cs" />
   </ItemGroup>
   <ItemGroup>
