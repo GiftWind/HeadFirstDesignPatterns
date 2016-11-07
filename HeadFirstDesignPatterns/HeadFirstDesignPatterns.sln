@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{6849BFC0-906E-459C-83FB-0364B3D388CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabricMethod", "SimpleFabric\FabricMethod.csproj", "{1F27CAAF-83E1-49C0-BD6C-89E3EA8F2FAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "SimpleFabric\FactoryMethod.csproj", "{1F27CAAF-83E1-49C0-BD6C-89E3EA8F2FAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

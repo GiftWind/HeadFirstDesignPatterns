@@ -1,4 +1,4 @@
-﻿namespace FabricMethod
+﻿namespace FactoryMethod
 {
     internal class ChicagoStylePepperoniPizza : Pizza
     {

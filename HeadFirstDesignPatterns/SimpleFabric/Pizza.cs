@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace FabricMethod
+namespace FactoryMethod
 {
     public abstract class Pizza
     {

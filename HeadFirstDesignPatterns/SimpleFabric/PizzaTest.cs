@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FabricMethod
+namespace FactoryMethod
 {
     class PizzaTest
     {
@@ -9,7 +9,9 @@ namespace FabricMethod
             PizzaStore NYStore = new NYStylePizzaStore();
             PizzaStore ChicagoStore = new ChicagoStylePizzaStore();
 
+#pragma warning disable RECS0091 // Use 'var' keyword when possible
             Pizza pizza = NYStore.OrderPizza("cheese");
+#pragma warning restore RECS0091 // Use 'var' keyword when possible
             Console.WriteLine($"Ethan ordered a {pizza.Name}.");
 
             pizza = ChicagoStore.OrderPizza("cheese");

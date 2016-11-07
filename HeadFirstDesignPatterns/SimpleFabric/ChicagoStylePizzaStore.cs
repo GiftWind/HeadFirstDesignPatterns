@@ -1,26 +1,22 @@
-﻿namespace FabricMethod
+﻿namespace FactoryMethod
 {
     public class ChicagoStylePizzaStore : PizzaStore
     {
         public override Pizza CreatePizza(string type)
         {
-            if (type == "cheese")
+            switch (type)
             {
-                return new ChicagoStyleCheesePizza();
+                case "cheese":
+                    return new ChicagoStyleCheesePizza();
+                case "pepperoni":
+                    return new ChicagoStylePepperoniPizza();
+                case "clam":
+                    return new ChicagoStyleClamPizza();
+                case "veggie":
+                    return new ChicagoVeggiePizza();
+                default:
+                    return null;
             }
-            else if (type == "pepperoni")
-            {
-                return new ChicagoStylePepperoniPizza();
-            }
-            else if (type == "clam")
-            {
-                return new ChicagoStyleClamPizza();
-            }
-            else if (type == "veggie")
-            {
-                return new ChicagoVeggiePizza();
-            }
-            else return null;
         }
     }
 }

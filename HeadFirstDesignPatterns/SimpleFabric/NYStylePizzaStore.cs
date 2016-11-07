@@ -1,26 +1,22 @@
-﻿namespace FabricMethod
+﻿namespace FactoryMethod
 {
     class NYStylePizzaStore : PizzaStore
     {
         public override Pizza CreatePizza(string type)
         {
-            if (type == "cheese")
+            switch (type)
             {
-                return new NYStyleCheesePizza();
+                case "cheese":
+                    return new NYStyleCheesePizza();
+                case "pepperoni":
+                    return new NYStylePepperoniPizza();
+                case "clam":
+                    return new NYStyleClamPizza();
+                case "veggie":
+                    return new NYStyleVeggiePizza();
+                default:
+                    return null;
             }
-            else if (type == "pepperoni")
-            {
-                return new NYStylePepperoniPizza();
-            }
-            else if (type == "clam")
-            {
-                return new NYStyleClamPizza();
-            }
-            else if (type == "veggie")
-            {
-                return new NYStyleVeggiePizza();
-            }
-            else return null;
         }
     }
 }
