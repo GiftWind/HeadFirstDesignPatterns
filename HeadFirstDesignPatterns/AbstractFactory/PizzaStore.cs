@@ -2,10 +2,11 @@
 {
     public abstract class PizzaStore
     {
-        IPizzaIngredientFactory _ingredientFactory;
-        public Pizza OrderPizza(string type)
+        public IPizzaIngredientFactory ingredientFactory;
+        
+        public Pizza OrderPizza(string item)
         {
-            Pizza pizza = CreatePizza(type);
+            Pizza pizza = CreatePizza(item);
             pizza.Prepare();
             pizza.Bake();
             pizza.Cut();
@@ -14,6 +15,6 @@
             return pizza;
         }
 
-        internal abstract Pizza CreatePizza(string type);
+        internal abstract Pizza CreatePizza(string item);
     }
 }

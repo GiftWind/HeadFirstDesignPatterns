@@ -2,7 +2,7 @@
 
 namespace AbstractFactory
 {
-    abstract class Pizza
+    public abstract class Pizza
     {
         public string Name { get; set; }
         public Dough Dough { get; set; }
@@ -14,17 +14,17 @@ namespace AbstractFactory
 
         public abstract void Prepare();
 
-        void Bake()
+        public void Bake()
         {
             Console.WriteLine("Bake for 25 minutes at 350");
         }
 
-        void Cut()
+        public void Cut()
         {
             Console.WriteLine("Cutting the pizza into diagonal slices");
         }
 
-        void Box()
+        public void Box()
         {
             Console.WriteLine("Place pizza in official PizzaStore box");
         }

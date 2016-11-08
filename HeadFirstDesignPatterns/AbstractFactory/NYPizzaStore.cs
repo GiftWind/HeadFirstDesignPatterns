@@ -1,11 +1,15 @@
 ﻿namespace AbstractFactory
 {
-    public class NYPizzaStore
+    public class NYPizzaStore : PizzaStore
     {
-        Pizza CreatePizza(string item)
+        public NYPizzaStore()
+        {
+            this.ingredientFactory = new NYPizzaIngredientFactory();
+        }
+        internal override Pizza CreatePizza(string item)
         {
             Pizza pizza = null;
-            IPizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
+            
             if (item.Equals("cheese"))
             {
                 pizza = new CheesePizza(ingredientFactory);

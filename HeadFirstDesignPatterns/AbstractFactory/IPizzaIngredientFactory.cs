@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactory
 {
-    interface IPizzaIngredientFactory
+    public interface IPizzaIngredientFactory
     {
         Dough CreateDough();
         Sauce CreateSauce();
