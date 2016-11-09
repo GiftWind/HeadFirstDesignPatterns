@@ -1,48 +1,55 @@
 ﻿namespace Singleton
 {
-    class ChocolateBoiler
+    public sealed class ChocolateBoiler
     {
-        private bool _isEmpty;
-        private bool _isBoiled;
-        private static ChocolateBoiler _boiler;
+        public bool IsEmpty { get; private set; }
+        public bool IsBoiled { get; private set; }
+        static volatile ChocolateBoiler _boiler;
+        static readonly object _syncRoot = new object();
 
-        private ChocolateBoiler()
+        ChocolateBoiler()
         {
-            _isEmpty = true;
-            _isBoiled = false;
+            IsEmpty = true;
+            IsBoiled = false;
         }
 
         public static ChocolateBoiler GetBoiler()
         {
             if (_boiler == null)
             {
-                _boiler = new ChocolateBoiler();
+                lock(_syncRoot)
+                {
+                    if (_boiler == null)
+                    {
+                        _boiler = new ChocolateBoiler();
+                    }
+                }
             }
             return _boiler;
         }
 
         public void Fill()
         {
-            if (_isEmpty)
+            if (IsEmpty)
             {
-                _isEmpty = false;
-                _isBoiled = false;
+                IsEmpty = false;
+                IsBoiled = false;
             }
         }
 
         public void Drain()
         {
-            if (!_isEmpty && _isBoiled)
+            if (!IsEmpty && IsBoiled)
             {
-                _isEmpty = true;
+                IsEmpty = true;
             }
         }
 
         public void Boil()
         {
-            if (!_isEmpty && !_isBoiled)
+            if (!IsEmpty && !IsBoiled)
             {
-                _isBoiled = true;
+                IsBoiled = true;
             }
         }
     }
