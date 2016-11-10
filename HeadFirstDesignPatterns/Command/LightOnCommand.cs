@@ -2,7 +2,7 @@
 {
     class LightOnCommand : ICommand
     {
-        public Light Light { get; set; }
+        public Light Light { get; private set; }
 
         public void Execute()
         {
@@ -11,7 +11,7 @@
 
         public LightOnCommand(Light light)
         {
-            this.Light = light;
+            Light = light;
         }
     }
 }

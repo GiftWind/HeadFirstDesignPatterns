@@ -2,14 +2,14 @@
 {
     class GarageDoorOpenCommand : ICommand
     {
-        public GarageDoor GarageDoor { get; set; }
+        public GarageDoor GarageDoor { get; private set; }
         public void Execute()
         {
             GarageDoor.Up();
         }
         public GarageDoorOpenCommand(GarageDoor garageDoor)
         {
-            this.GarageDoor = garageDoor;
+            GarageDoor = garageDoor;
         }
     }
 }

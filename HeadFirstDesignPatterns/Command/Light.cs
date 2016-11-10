@@ -4,14 +4,21 @@ namespace Command
 {
     internal class Light
     {
+        public string Name { get; private set; }
+
+        public Light(string v)
+        {
+            Name = v;
+        }
+
         internal void On()
         {
-            Console.WriteLine("Light is On");
+            Console.WriteLine($"{Name} light is On");
         }
 
         internal void Off()
         {
-            Console.WriteLine("Light is off");
+            Console.WriteLine($"{Name} light is off");
         }
     }
 }
