@@ -2,19 +2,19 @@
 {
     class StereoOnWithCDCommand : ICommand
     {
-        public Stereo Stereo { get; private set; }
+        Stereo _stereo;
 
         public StereoOnWithCDCommand(Stereo stereo)
         {
-            Stereo = stereo;
+            _stereo = stereo;
         }
 
         public void Execute()
         {
-            Stereo.On();
-            Stereo.SetCD();
+            _stereo.On();
+            _stereo.SetCD();
             // TODO: set default volume without magic constant
-            Stereo.SetVolume(11);
+            _stereo.SetVolume(11);
         }
     }
 }

@@ -2,16 +2,16 @@
 {
     class CeilingFanOffCommand : ICommand
     {
-        public CeilingFan CeilingFan { get; private set; }
+        CeilingFan _ceilingFan;
 
         public CeilingFanOffCommand(CeilingFan ceilingFan)
         {
-            CeilingFan = ceilingFan;
+            _ceilingFan = ceilingFan;
         }
 
         public void Execute()
         {
-            CeilingFan.Off();
+            _ceilingFan.Off();
         }
     }
 }

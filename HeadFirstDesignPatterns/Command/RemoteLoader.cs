@@ -10,9 +10,9 @@ namespace Command
 
             Light livingRoomLight = new Light("Living room");
             Light kitchenLight = new Light("Kitchen Light");
-            CeilingFan ceilingFan = new CeilingFan();
+            CeilingFan ceilingFan = new CeilingFan("Living room");
             GarageDoor garageDoor = new GarageDoor();
-            Stereo stereo = new Stereo();
+            Stereo stereo = new Stereo("Living room");
 
             LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
             LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
@@ -20,7 +20,7 @@ namespace Command
             LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
             LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
 
-            CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+            CeilingFanOnCommand ceilingFanHigh = new CeilingFanOnCommand(ceilingFan);
             CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 
             GarageDoorOpenCommand garageDoorUp = new GarageDoorOpenCommand(garageDoor);

@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Command
+﻿namespace Command
 {
     class CeilingFanHighCommand : ICommand
     {
-        public CeilingFan CeilingFan { get; private set; }
+        CeilingFan _ceilingFan;
 
         public CeilingFanHighCommand(CeilingFan ceilingFan)
         {
-            CeilingFan = ceilingFan;
+            _ceilingFan = ceilingFan;
         }
 
         public void Execute()
         {
-            CeilingFan.High();
+            _ceilingFan.High();
         }
     }
 }

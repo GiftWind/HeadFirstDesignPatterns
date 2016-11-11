@@ -2,16 +2,16 @@
 {
     class LightOnCommand : ICommand
     {
-        public Light Light { get; private set; }
+        Light _light;
 
         public void Execute()
         {
-            Light.On();
+            _light.On();
         }
 
         public LightOnCommand(Light light)
         {
-            Light = light;
+            _light = light;
         }
     }
 }

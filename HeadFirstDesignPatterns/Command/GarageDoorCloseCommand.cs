@@ -2,16 +2,16 @@
 {
     class GarageDoorCloseCommand : ICommand
     {
-        public GarageDoor GarageDoor { get; private set; }
+        GarageDoor _garageDoor;
 
         public GarageDoorCloseCommand(GarageDoor garageDoor)
         {
-            GarageDoor = garageDoor;
+            _garageDoor = garageDoor;
         }
 
         public void Execute()
         {
-            GarageDoor.Down();
+            _garageDoor.Down();
         }
     }
 }

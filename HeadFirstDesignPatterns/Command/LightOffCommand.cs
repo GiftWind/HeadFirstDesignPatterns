@@ -2,16 +2,16 @@
 {
     class LightOffCommand : ICommand
     {
-        public Light Light { get; private set; }
+        Light _light;
 
         public LightOffCommand(Light light)
         {
-            Light = light;
+            _light = light;
         }
 
         public void Execute()
         {
-            Light.Off();
+            _light.Off();
         }
     }
 }

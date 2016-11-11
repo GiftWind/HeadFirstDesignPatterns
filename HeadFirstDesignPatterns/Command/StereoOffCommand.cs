@@ -2,16 +2,16 @@
 {
     class StereoOffCommand : ICommand
     {
-        public Stereo Stereo { get; private set; }
+        Stereo _stereo;
 
         public StereoOffCommand(Stereo stereo)
         {
-            Stereo = stereo;
+            _stereo = stereo;
         }
 
         public void Execute()
         {
-            Stereo.Off();
+            _stereo.Off();
         }
     }
 }

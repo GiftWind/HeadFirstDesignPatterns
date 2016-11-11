@@ -4,6 +4,13 @@ namespace Command
 {
     public class Stereo
     {
+        public string Name { get; private set; }
+
+        public Stereo(string name)
+        {
+            Name = name;
+        }
+
         internal void On()
         {
             Console.WriteLine("Stereo is On");
