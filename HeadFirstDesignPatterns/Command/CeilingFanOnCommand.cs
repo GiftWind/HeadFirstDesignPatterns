@@ -1,17 +1,22 @@
 ﻿namespace Command
 {
-    internal class CeilingFanOnCommand : ICommand
+    class CeilingFanOnCommand : ICommand
     {
-        CeilingFan CeilingFan;
+        CeilingFan _ceilingFan;
 
         public CeilingFanOnCommand(CeilingFan ceilingFan)
         {
-            CeilingFan = ceilingFan;
+            _ceilingFan = ceilingFan;
         }
 
         public void Execute()
         {
-            CeilingFan.On();
+            _ceilingFan.On();
+        }
+
+        public void Undo()
+        {
+            _ceilingFan.Off();
         }
     }
 }

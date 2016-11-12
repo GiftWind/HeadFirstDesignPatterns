@@ -13,5 +13,10 @@
         {
             _stereo.Off();
         }
+
+        public void Undo()
+        {
+            _stereo.On();
+        }
     }
 }

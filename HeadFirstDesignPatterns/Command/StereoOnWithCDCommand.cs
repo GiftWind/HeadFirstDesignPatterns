@@ -16,5 +16,10 @@
             // TODO: set default volume without magic constant
             _stereo.SetVolume(11);
         }
+
+        public void Undo()
+        {
+            _stereo.Off();
+        }
     }
 }

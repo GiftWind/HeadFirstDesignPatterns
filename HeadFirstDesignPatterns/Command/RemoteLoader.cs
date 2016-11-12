@@ -33,17 +33,20 @@ namespace Command
             remoteControl.SetCommand(1, kitchenLightOn, kitchenLightOff);
             remoteControl.SetCommand(2, ceilingFanHigh, ceilingFanOff);
             remoteControl.SetCommand(3, stereoOnWithCD, stereoOff);
-
+           
             Console.WriteLine(remoteControl);
 
             remoteControl.OnButtonWasPressed(0);
             remoteControl.OffButtonWasPressed(0);
+            remoteControl.UndoButtonWasPressed();
             remoteControl.OnButtonWasPressed(1);
             remoteControl.OffButtonWasPressed(1);
             remoteControl.OnButtonWasPressed(2);
             remoteControl.OffButtonWasPressed(2);
+            remoteControl.UndoButtonWasPressed();
             remoteControl.OnButtonWasPressed(3);
             remoteControl.OffButtonWasPressed(3);
+            remoteControl.UndoButtonWasPressed();
 
             Console.ReadLine();
         }

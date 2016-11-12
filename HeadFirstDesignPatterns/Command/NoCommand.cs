@@ -8,5 +8,10 @@ namespace Command
         {
       
         }
+
+        public void Undo()
+        {
+         
+        }
     }
 }

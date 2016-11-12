@@ -6,6 +6,7 @@ namespace Command
     {
         ICommand[] OnCommands;
         ICommand[] OffCommands;
+        ICommand UndoCommand;
 
         public RemoteControl()
         {
@@ -18,6 +19,7 @@ namespace Command
                 OnCommands[i] = NoCommand;
                 OffCommands[i] = NoCommand;
             }
+            UndoCommand = NoCommand;
         }
 
         public void SetCommand(int slot, ICommand onCommand, ICommand offCommand)
@@ -29,11 +31,18 @@ namespace Command
         public void OnButtonWasPressed(int slot)
         {
             OnCommands[slot].Execute();
+            UndoCommand = OnCommands[slot];
         }
 
         public void OffButtonWasPressed(int slot)
         {
             OffCommands[slot].Execute();
+            UndoCommand = OffCommands[slot];
+        }
+
+        public void UndoButtonWasPressed()
+        {
+            UndoCommand.Undo();
         }
 
         public override string ToString()
