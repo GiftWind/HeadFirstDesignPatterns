@@ -2,23 +2,24 @@
 
 namespace Command
 {
-    class Light
+    class TV
     {
         public string Name { get; private set; }
 
-        public Light(string v)
+        public TV(string name)
         {
-            Name = v;
+            Name = name;
         }
 
         internal void On()
         {
-            Console.WriteLine($"{Name} light is On");
+            Console.WriteLine($"{Name} TV is on");
         }
 
         internal void Off()
         {
-            Console.WriteLine($"{Name} light is off");
+            Console.WriteLine($"{Name} TV is off");
         }
+
     }
 }

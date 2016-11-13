@@ -13,6 +13,8 @@ namespace Command
             CeilingFan ceilingFan = new CeilingFan("Living room");
             GarageDoor garageDoor = new GarageDoor();
             Stereo stereo = new Stereo("Living room");
+            TV tv = new TV("Living room");
+            Hottub hottub = new Hottub();
 
             LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
             LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
@@ -29,10 +31,24 @@ namespace Command
             StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
             StereoOffCommand stereoOff = new StereoOffCommand(stereo);
 
+            TVOnCommand tvOn = new TVOnCommand(tv);
+            TVOffCommand tvOff = new TVOffCommand(tv);
+
+            HottubOnCommand hottubOn = new HottubOnCommand(hottub);
+            HottubOffCommand hottubOff = new HottubOffCommand(hottub);
+
+            ICommand[] partyOn = { livingRoomLightOn, stereoOnWithCD, tvOn, hottubOn };
+            ICommand[] partyOff = { livingRoomLightOff, stereoOff, tvOff, hottubOff };
+
+            //TODO: deal with the Macrocommand name
+            Macrocommand partyOnMacro = new Macrocommand(partyOn);
+            Macrocommand partyOffMacro = new Macrocommand(partyOff);
+
             remoteControl.SetCommand(0, livingRoomLightOn, livingRoomLightOff);
             remoteControl.SetCommand(1, kitchenLightOn, kitchenLightOff);
             remoteControl.SetCommand(2, ceilingFanHigh, ceilingFanOff);
             remoteControl.SetCommand(3, stereoOnWithCD, stereoOff);
+            remoteControl.SetCommand(4, partyOnMacro, partyOffMacro);
            
             Console.WriteLine(remoteControl);
 
@@ -47,6 +63,11 @@ namespace Command
             remoteControl.OnButtonWasPressed(3);
             remoteControl.OffButtonWasPressed(3);
             remoteControl.UndoButtonWasPressed();
+            remoteControl.OnButtonWasPressed(4);
+            Console.WriteLine("Party is on!");
+            remoteControl.OffButtonWasPressed(4);
+            Console.WriteLine("Party is over");
+
 
             Console.ReadLine();
         }
