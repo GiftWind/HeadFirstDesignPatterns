@@ -48,7 +48,21 @@ namespace Facade
             _amp.On();
             _amp.SetSurroundSound();
             _amp.SetVolume(10);
+            _dvd.On();
+            _dvd.PlayMovie(movie);
+        }
 
+        public void EndMovie()
+        {
+            Console.WriteLine("Shutting movie theater down");
+            _popper.Off();
+            _lights.On();
+            _screen.Up();
+            _projector.Off();
+            _amp.Off();
+            _dvd.Stop();
+            _dvd.Eject();
+            _dvd.Off();
         }
 
     }
