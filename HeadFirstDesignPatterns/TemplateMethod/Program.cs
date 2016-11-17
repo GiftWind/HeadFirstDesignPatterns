@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateMethod
 {
@@ -10,8 +6,9 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
-            Tea myTea = new Tea();
-            myTea.PrepareRecipe();
+            CoffeeWithHook cwh = new CoffeeWithHook();
+            Console.WriteLine("Preparing coffee");
+            cwh.PrepareRecipe();
             Console.ReadLine();
 
         }
