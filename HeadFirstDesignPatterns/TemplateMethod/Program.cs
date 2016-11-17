@@ -10,6 +10,10 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
+            Tea myTea = new Tea();
+            myTea.PrepareRecipe();
+            Console.ReadLine();
+
         }
     }
 }

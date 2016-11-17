@@ -2,34 +2,16 @@
 
 namespace TemplateMethod
 {
-    public class Coffee
+    public class Coffee : CaffeineBeverage
     {
-        public void PrepareRecipe()
+        internal override void Brew()
         {
-            BoilWater();
-            BrewCoffeeGrinds();
-            PourInCup();
-            AddSugarAndMilk();
+            Console.WriteLine("Dripping Coffee through filter.");
         }
 
-        void BoilWater()
+        internal override void AddCondiments()
         {
-            Console.WriteLine("Boiling water");
-        }
-
-        void BrewCoffeeGrinds()
-        {
-            Console.WriteLine("Dripping Coffee through filter");
-        }
-
-        void PourInCup()
-        {
-            Console.WriteLine("Pouring ino cup");
-        }
-
-        void AddSugarAndMilk()
-        {
-            Console.WriteLine("Adding Sugar and Milk");
+            Console.WriteLine("Adding Sugar and Milk.");
         }
     }
 }

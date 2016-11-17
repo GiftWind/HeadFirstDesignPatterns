@@ -2,34 +2,16 @@
 
 namespace TemplateMethod
 {
-    public class Tea
+    public class Tea : CaffeineBeverage
     {
-        public void PrepareRecipe()
+        internal override void AddCondiments()
         {
-            BoilWater();
-            SteepTeaBag();
-            PourInCup();
-            AddLemon();
+            Console.WriteLine("Adding Lemon.");
         }
 
-        void BoilWater()
+        internal override void Brew()
         {
-            Console.WriteLine("Boiling water");
-        }
-
-        void SteepTeaBag()
-        {
-            Console.WriteLine("Steeping the tea");
-        }
-
-        void PourInCup()
-        {
-            Console.WriteLine("Pouring into cup");
-        }
-
-        void AddLemon()
-        {
-            Console.WriteLine("Adding Lemon");
+            Console.WriteLine("Steeping the tea.");
         }
     }
 }
