@@ -6,7 +6,7 @@ namespace Iterator
     {
         static readonly int _maxItems = 6;
         int numberOfItems = 0;
-        public MenuItem[] MenuItems { get; private set; }
+        MenuItem[] MenuItems;
         
 
         public DinerMenu()
@@ -20,7 +20,7 @@ namespace Iterator
 
         }
 
-        void AddItem(string name, string description, bool vegetarian, double price)
+        public void AddItem(string name, string description, bool vegetarian, double price)
         {
             MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
             if (numberOfItems >= _maxItems)
@@ -33,5 +33,11 @@ namespace Iterator
                 numberOfItems++;
             }
         }
+
+        public IIterator CreateIterator() 
+        {
+            return new DinerMenuIterator();
+        }
+
     }
 }
