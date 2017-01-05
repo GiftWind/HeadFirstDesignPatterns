@@ -36,7 +36,7 @@ namespace Iterator
 
         public IIterator CreateIterator() 
         {
-            return new DinerMenuIterator();
+            return new DinerMenuIterator(MenuItems);
         }
 
     }
